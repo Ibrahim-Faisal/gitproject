@@ -3,6 +3,15 @@
 
 @section('content')
 
+    @if(Session::has('deleted_user'))
+
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong>{{session('deleted_user')}}</strong>
+        </div>
+
+    @endif
+
     <h1>Users</h1>
 
     <table class="table table-hover table-striped">
